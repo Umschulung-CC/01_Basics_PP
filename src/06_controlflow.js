@@ -86,20 +86,20 @@ switch (job)
 {
     case "driver":  // job == "driver"
         console.log(firstName + " fährt TAXI / Uber!")
-        // break;
+        break;
     case "diver":  // job == "diver"
         console.log(firstName + " taucht im Rhein!")
-        // break;
+        break;
     case "artist":  // job == "artist"
         console.log(firstName + " malt ein Bild!")
-        // break;
+        break;
     case "pilot":  // job == "pilot"
         console.log(firstName + " macht etwas anderes! --> default!")
-        // break;
+        break;
     case "teacher":  // job == "teacher"
     case "instructor":  // job == "instructor"
         console.log(firstName + " unterrichtet!")
-        // break; 
+        break; 
     default: // WICHTIG
         console.log(firstName + " hier ist ein Fehler du Bauer!")
         break;
