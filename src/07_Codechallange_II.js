@@ -42,10 +42,10 @@ function getValidNameInput() {
     let name;
     while (true) {
         name = prompt("Bitte geben Sie einen Namen ein: ").trim();
-        if (name.length > 0) {
+        if (/^[a-zA-ZäöüÄÖÜß\s]+$/.test(name) && name.length > 0) {
             break;
         } else {
-            console.log("Ungültige Eingabe. Der Name darf nicht leer sein.");
+            console.log("Ungültige Eingabe. Der Name darf nur Buchstaben enthalten und darf nicht leer sein.");
         }
     }
     return name;
@@ -69,4 +69,3 @@ if (age >= 0 && age <= 5) {
 
 // Ergebnis ausgeben
 console.log(`${name} trinkt ${drink}.`);
-
