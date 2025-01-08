@@ -54,14 +54,34 @@ function ausgabeName2(firstName) { //Parameter
 // Postulat: one function = one job (uncle Bob)
 // SRP single responsibility principle
 
-ausgabeNameSRP("Markus","Clephas"); // Argument zur Text ausgabe
+// ausgabeNameSRP("Markus","Clephas"); // Argument zur Text ausgabe
 
-function ausgabeNameSRP(firstName, secondName) {
+// function ausgabeNameSRP(firstName, secondName) {
     
     // 1. Funktionalität: string composing
-    const GAP = " ";
-    let outputStr ="Hallo,"+ GAP + firstName + GAP + secondName + "!"
+    // const GAP = " ";
+    // let outputStr ="Hallo,"+ GAP + firstName + GAP + secondName + "!"
 
     // 2. Funktionaltät: string output
-    console.log(outputStr);
+    // console.log(outputStr);
+// }
+
+/***** Funktion 03b *****/
+
+// 1. Funktionalität: string composing
+output(getString("Markus","Clephas"));
+
+function getString(firstName, secondName) {
+    const GAP = " ";
+    let outputStr = "Hallo,"+ GAP + firstName + GAP + secondName + "!";
+    return outputStr // return schickt die Daten an den call ...
+    console.log("BauerParty") // return beendet die Funktion
+}
+
+// 2. Funktionalität: string output
+// output("hi");
+// output("8");
+// output("true")
+function output(outputData) {
+    console.log(outputData);
 }
