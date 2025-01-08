@@ -14,12 +14,24 @@ function test ()
 /***** Funktionen 02a *****/
 // 2a. Parametrisierung + Datenübergabe von INNEN
 
-ausgabeName(); //call
+// ausgabeName(); //call
 
 function ausgabeName() {
     // interne Variable | What happen in Vegas ...
     let firstName = "Markus";
     console.log("Hallo, " + firstName + "!");
 }
-
 // console.log(firstName); // Fehler : scope!
+
+
+/***** Funktionen 02b *****/
+// 2b. Parametrisierung + Datenübergabe von AUSSEN
+
+ausgabeName2("Markus") // Argument --> Daten für Parameter
+ausgabeName2("Manuel")
+ausgabeName2("Leon")
+ausgabeName2("Alexander")
+
+function ausgabeName2(firstName) { //Parameter
+    console.log("Hallo, " + firstName + "!");    
+}
