@@ -27,11 +27,24 @@ function ausgabeName() {
 /***** Funktionen 02b *****/
 // 2b. Parametrisierung + Datenübergabe von AUSSEN
 
-ausgabeName2("Markus") // Argument --> Daten für Parameter
-ausgabeName2("Manuel")
-ausgabeName2("Leon")
-ausgabeName2("Alexander")
+// ausgabeName2("Markus") // Argument --> Daten für Parameter
+// ausgabeName2("Manuel")
+// ausgabeName2("Leon")
+// ausgabeName2("Alexander")
 
 function ausgabeName2(firstName) { //Parameter
     console.log("Hallo, " + firstName + "!");    
+}
+
+/***** Funktionen 02c *****/
+// 2c. Mehrere Parameter / Argumente
+
+ausgabeNameParams("Markus","Clephas");
+
+const prompt = require('prompt-sync')({sigint: true});
+ausgabeNameParams(prompt("Vorname? :"),prompt("Name? :")); // Piping
+
+
+function ausgabeNameParams(firstName, secondName) {
+    console.log("Hallo, " + firstName + " " + secondName + "!");
 }
