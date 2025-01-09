@@ -25,7 +25,7 @@ main();
 // Eingabe Überprüfung für Number
 function getValidatedNum(promptText) {
     let attempts = 0;
-    while (attempts < 1) {      // Zähler für Fehlversuche bis Abbruch des Programms
+    while (attempts < 2) {      // Zähler für Fehlversuche bis Abbruch des Programms
         const input = prompt(promptText);
         const num = parseFloat(input);
         if (!isNaN(num)) {
@@ -48,7 +48,7 @@ function getNum2() {
 function getop() {
     const validOps = ["+", "-", "*", ":", "/"];
     let attempts = 0;
-    while (attempts < 3) {
+    while (attempts < 2) {  // Zähler für Fehlversuche bis Abbruch des Programms
         const op = prompt("Mit welchem Operator soll berechnet werden? (+, -, *, :, /): ");
         if (validOps.includes(op)) {
             return op;
