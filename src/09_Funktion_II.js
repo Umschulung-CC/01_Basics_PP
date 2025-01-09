@@ -42,18 +42,21 @@ function multiply(a,b) {
 	return  a * b;
 }
 
+const ERROR_STR_DIV = "Teilen durch 0 nicht möglich!";
+
 // modul: division a / b | test:
-output(divide(4,2));
-output(divide(3,2));
-output(divide(3,-2));
-output(divide(0,2));
-output(divide(3,0));
-output(divide(0,0));
+// output(divide(4,2));
+// output(divide(3,2));
+// output(divide(3,-2));
+// output(divide(0,2));
+// output(divide(3,0));
+// output(divide(0,0));
 function divide(a,b) {
-if (b != 0){  // Test
-    return a / b
-} 
-else{
-    return "Division durch Null nicht möglich!" // Limit = a / 0 = infinte
-}
-}
+
+    if (b != 0) { // Ausnahme
+         return a / b
+    } else {
+         return ERROR_STR_DIV;
+    }
+     
+ }
