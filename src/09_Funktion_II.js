@@ -43,12 +43,17 @@ function multiply(a,b) {
 }
 
 // modul: division a / b | test:
-// output(divide(4,2));
-// output(divide(3,2));
-// output(divide(3,-2));
-// output(divide(0,2));
-// output(divide(3,0));
-// output(divide(0,0));
+output(divide(4,2));
+output(divide(3,2));
+output(divide(3,-2));
+output(divide(0,2));
+output(divide(3,0));
+output(divide(0,0));
 function divide(a,b) {
+if (b != 0){  // Test
     return a / b
+} 
+else{
+    return "Division durch Null nicht möglich!" // Limit = a / 0 = infinte
+}
 }
