@@ -36,7 +36,8 @@ function startProgram() {
         output: process.stdout
     });
 
-    console.log("Drücken Sie 'Q', oder Eingabe wird verweigert und das Programm wird beenden.");
+    console.log("Drücken Sie 'Q', um Fortzufahren. Jede andere Eingabe beendet das Programm.");
+
     readline.question("Eingabe: ", (input) => {
         if (input.toUpperCase() === "Q") {
             readline.question(getSentence(["Bist", "du", "Markus"], "Q") + " ", (answer1) => {
@@ -47,14 +48,19 @@ function startProgram() {
                         "zwei", "diwodaso", "Spass", "mache,", "habbe", "Sie", "die"
                     ], "Q") + " ", (answer2) => {
                         if (answer2.toLowerCase().trim() === "ja") {
-                            output("YEEEAAARRR!");
+                            output(getSentence(["YEEEAAARRR"], "E"));
+                        } else if (answer2.toLowerCase().trim() === "nein") {
+                            output(getSentence(["Okay", "schade", "auf", "Wiedersehen"], "S"));
                         } else {
-                            output(getSentence(["Okay", "dann", "nicht"], "S"));
+                            console.log("Ungültige Eingabe. Programm beendet.");
                         }
                         readline.close();
                     });
+                } else if (answer1.toLowerCase().trim() === "nein") {
+                    output(getSentence(["Okay", "dann", "auf", "Wiedersehen"], "S"));
+                    readline.close();
                 } else {
-                    output(getSentence(["Okay", "dann", "nicht"], "S"));
+                    console.log("Ungültige Eingabe. Programm beendet.");
                     readline.close();
                 }
             });
