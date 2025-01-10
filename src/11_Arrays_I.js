@@ -14,7 +14,15 @@
 
 /*** 02. Theorie: Array */
 
+// let arr;
+// // arr = new Array(); / Konstruktor
+// arr = [] // Literal
+// arr = [1,2,3,4,5,6,7,8];
 
+// output(arr);
+// output(arr.length); // Azahl der Elemente
+// output(arr [0]); // Index 0 (1. Pos. im Arry)
+// output(arr[arr.length-1]); // letzte Pos. / allgemein
 
 
 
