@@ -31,41 +31,64 @@ let arr;
 
 /**** Objekte 1 Daten/Funktionen *****/
 
-let person = {
-                firstName: "Markus",
-                familyName: "Clephas",
-                birthdate: "20.8.1987",
-                salary: [120000, 160000],
-                sayhello: function() {
-                    return "Hallo";
-                },
-                sayHello2: function() {
-                    return "Hallo, ich bin " + this.firstName;
+// let person = {
+//                 firstName: "Markus",
+//                 familyName: "Clephas",
+//                 birthdate: "20.8.1987",
+//                 salary: [120000, 160000],
+//                 sayhello: function() {
+//                     return "Hallo";
+//                 },
+//                 sayHello2: function() {
+//                     return "Hallo, ich bin " + this.firstName;
                     
-                }
+//                 }
                     
+// };
 
 
-};
-
-
-output(person);
-output(person.firstName);
-output(person.familyName);
-output(person.birthdate);
+// output(person);
+// output(person.firstName);
+// output(person.familyName);
+// output(person.birthdate);
 // output(person.salary[1]);
 // output(person.sayhello());
 // output(person.sayHello2());
 
 
-const txt = person.sayhello() + ",  ich bin " +  person.firstName +  " bin geboren am " + person.birthdate +
-            " und verdiene " + person.salary[1] + " p.a."
+// const txt = person.sayhello() + ",  ich bin " +  person.firstName +  " bin geboren am " + person.birthdate +
+//             " und verdiene " + person.salary[1] + " p.a."
+
+//             output(txt);
+
+
+/***** Objekte 2 - Hierarchie *******/
+// Tiefer, tiefer - Irgendwo in der Tiefe gibt es ein Licht // K.Bush
+// Der Baikalsee ist mit 1642 m der tiefste See der Erde. ...
+// deep - deeper - deepest
+// nested object {{{}}}
+
+let baikal = {
+                value: "10m",
+                deep: {
+                        deeper: {
+                                    deepest: "Das Licht - auf 1642m!",
+                                    temperatur: "4 Grad Celsius"
+                    
+                                }
 
 
 
-            output(txt);
+                }
 
-//output("hi");
+};
+
+output(baikal);
+output(baikal.value);
+output(baikal.deep.deeper.deepest);
+output(baikal.deep.deeper.temperatur);
+
+// output("hi");
 function output(outputData) {
     console.log(outputData);
 }
